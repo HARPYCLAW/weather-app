@@ -11,6 +11,7 @@ window.addEventListener('load', () => {
         navigator.geolocation.getCurrentPosition((position) => {
             long = position.coords.longitude;
             lat = position.coords.latitude;
+            var proxy = "https://cors-anywhere.herokuapp.com/";
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=fa50ad6bad3d99a33562d82f2c2f47cc
             `;
             fetch(url)
@@ -25,19 +26,19 @@ window.addEventListener('load', () => {
                 value.textContent = Math.round(feels_like-273);
                 climate.textContent = main;
                 if(id < 250)
-                icon.src = './icons/thunderstorm.png';
+                icon.src = './icons/thunderstormmm.png.png';
                 else if(id < 350)
                 icon.src = './icons/umbrella.png';
                 else if(id < 550)
-                icon.src = './icons/rain.png';
+                icon.src = './icons/rainnn.png.png';
                 else if(id < 650)
-                icon.src = './icons/snow.png';
+                icon.src = './icons/snowww.png.png';
                 else if(id < 800)
-                icon.src = './icons/haze.png';
+                icon.src = './icons/hazeee.png';
                 else if(id === 800)
-                icon.src = './icons/sun.png';
+                icon.src = './icons/sunny.png.png';
                 else if(id > 800)
-                icon.src = './icons/cloud.png';
+                icon.src = './icons/clouddd.png';
             });
         });
     
